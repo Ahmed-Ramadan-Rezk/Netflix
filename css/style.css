@@ -1,0 +1,492 @@
+/* Global Codes */
+
+:root {
+    --main-color: #000000;
+    --red-color: #e50914;
+    --darkGray-color: #252525 ;
+    --white-color: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (max-width: 991px) {
+    html, body {
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    h1, h2 {
+       text-align: center;
+    }
+}
+
+img {width: 100%}
+
+video {width: 100%}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--white-color);
+    z-index: 2;
+    position: relative;
+}
+
+/* Background With Opacity */
+
+.bg-rgba::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7)
+}
+
+.hr {border-bottom: 8px var(--darkGray-color) solid;}
+
+.pd-top {padding-top: 140px;}
+
+.pd-bottom {padding-bottom: 50px;}
+
+/* Edit h1 */
+
+.edit-heading {
+    text-transform: capitalize;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Size Of h2 */
+
+.font-size {font-size: 27px;}
+
+/* Header */
+
+header {
+    height: 110vh;
+    background-image: url(../images/EG-en-20200210-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.top-header {
+    margin: 20px 50px;
+    position: relative;
+}
+
+@media only screen and (max-width: 991px) {
+    .top-header {
+        margin: 20px 10px;
+    }
+
+    header {
+        height: 80vh;
+    }
+}
+
+.netflix-logo > h1 {
+    color: var(--red-color);
+    font-weight: bold;
+    user-select: none;
+}
+
+.sign_out {
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+
+.sign_out > button {
+    background-color: var(--red-color);
+    color: #FFF;
+    padding: 4px 17px;
+}
+
+.sign_out > button:hover {color: #FFF}
+
+.home-text {
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    transform: translate(-80%,-50%)
+}
+
+@media only screen and (max-width: 991px) {
+    .home-text {
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.home-text-info > h1 {
+    width: 466px;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+@media only screen and (max-width: 980px) {
+    .home-text-info > h1 {
+        font-size: 30px;
+        width: 350px
+    }
+
+    .home-text-info > h4 {
+        font-size: 20px;
+    }
+
+}
+
+.home-text-info .finish-button, .finish-button_2 {
+    background-color: var(--red-color);
+    border-radius: 0;
+    padding: 10px 35px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.home-text-info .finish-button:hover, .finish-button_2:hover {background-color: #ee000c;}
+
+.home-text-info .finish-button > h2, .finish-button_2 > h2 {margin:0; font-size: 25px}
+
+/* Enjoy On Your TV */
+
+@media only screen and (max-width: 980px) {
+    .enjoy-info {
+        padding-top: 70px;
+    }
+
+    .enjoy-info > h1 {
+        font-size: 30px;
+    }
+
+    .enjoy-info > h2 {
+        font-size: 20px;
+    }
+}
+
+.tv {position: relative;}
+
+.tv .autoplay-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%, -52%);
+    z-index: -1;
+    width: calc(72%);
+}
+
+/* Mobile Image */
+
+.mobile_image {
+    position: relative;
+}
+
+.overlay-card {
+    width: 315px;
+    background-color: #000;
+    border: 3px solid var(--darkGray-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 76%);
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 517px) {
+    .overlay-card {
+        width: 285px;
+        top: 155px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .overlay-card {
+        width: 410px;
+        top: 282px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .overlay-card {
+        top: 153px;
+    }
+}
+
+.overlay-card img {
+    width: 50px;
+    margin: 10px
+}
+
+.overlay-card > h5 {
+    text-transform: capitalize;
+    margin-top: 25px;
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.overlay-card > h6 {
+    color: #0071EB;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 980px) {
+    .your-shows-info {
+        padding-top: 100px;
+    }
+
+    .your-shows-info > h1 {
+        font-size: 30px;
+    }
+
+    .your-shows-info > h2 {
+        font-size: 20px;
+    }
+}
+
+/* Watch Everywhere */
+
+@media only screen and (max-width: 980px) {
+    .watch_everywhere-info {
+        padding-top: 50px;
+    }
+
+    .watch_everywhere-info > h1 {
+        font-size: 30px
+    }
+
+    .watch_everywhere-info > h2 {
+        font-size: 20px
+    }
+}
+
+.watch_everwhere-mac {
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.watch_everwhere-autoplay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-78%);
+    z-index: -1;
+    width: calc(64%);
+    overflow: hidden;
+}
+
+/* Watch Now */
+
+.girl_image {
+    width: 300px;
+    margin: 80px auto 0 auto;
+}
+
+.girl_image img {
+    border-radius: 5px;
+}
+
+.girl_image img::before {
+    background-color: rgba(0,0,0,.8);
+}
+
+.overlay-img {
+    width: 250px;
+    position: absolute;
+    top: 57%;
+    left: 60%;
+    transform: translate(-73%,-50%);
+    box-shadow: 0 0 20px var(--main-color), 0 0 10px var(--main-color);
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+    .overlay-img {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-39%);
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .overlay-img {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-39%);
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .watch_now-info {
+        text-align: center;
+        padding-top: 50px
+    }
+
+    .watch_now-info > h1 {
+        font-size: 30px;
+    }
+
+    .watch_now-info > h2 {
+        font-size: 20px;
+    }
+}
+
+.watch-button {
+    border: 1px solid var(--white-color);
+    border-radius: 2px;
+    color: var(--white-color);
+    padding: 10px 40px;
+    background: transparent;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.watch-button:hover {   
+    color: var(--white-color)
+}
+
+/* Frequently Questions */
+
+.single-list {
+    text-align: center;
+}
+
+.single-list > h1 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.questions_list {
+    list-style: none;
+    margin-top: 50px;
+}
+
+.questions_list li, .questions_list .desc {
+    width: 850px;
+    background-color: #303030;
+    margin: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    user-select: none;
+    padding: 22px;
+}
+
+.questions_list li::after {
+    content: '+';
+    float: right;
+    font-size: 40px;
+    margin-top: -44px;
+    color: #fff;
+}
+
+.close {
+    content: '-';
+    float: right;
+    font-size: 40px;
+    margin-top: -44px;
+    color: #fff;
+}
+
+.questions_list li > h2 {
+    font-weight: lighter;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.questions_list .desc {
+    margin-top: -9px;
+    display: none;
+    cursor: text;
+}
+
+.questions_list .desc span {
+    color: var(--white-color);
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 991px) {
+    .single-list > h1 {
+        font-size: 28px;
+    }
+
+    .questions_list li {
+        width: 95%;
+    }
+
+    .questions_list .desc {
+        width: 95%;
+    }
+
+    .questions_list .desc span {
+        font-size: 25px
+    }
+
+    .questions_list li > h2 {
+        text-align: left;
+        font-size: 20px
+    }
+
+    .finish-button_2 > h2 {
+        font-size: 20px;
+    }
+}
+
+.single-list button {margin-top: 40px;}
+
+/* Footer */
+
+.footer {
+    padding-top: 80px;
+}
+
+.footer a {color: #A6A6A6;}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {margin: 10px 0;}
+
+.footer-list li a {font-size: 13px; text-transform: capitalize;}
+
+/* Bottom Footer */
+
+#select {
+    background-color: transparent;
+    color: var(--white-color);
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 2px solid var(--darkGray-color);
+    color: #A6A6A6;
+}
+
+#select option {
+    background-color: var(--main-color);
+    padding: 5px;
+    border: 2px solid var(--darkGray-color);
+    color: #A6A6A6;
+}
+
+.text {
+    color: #A6A6A6;
+}   
